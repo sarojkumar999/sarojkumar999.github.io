@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Saroj Kumar — AI Architect & Researcher</title>
+<meta name="description" content="Dr. Saroj Kumar, PhD — AI/ML Researcher, Architect and Innovator at Wipro Limited, Kolkata. Generative AI, Agentic AI and Forward Deployed Engineering, with 12+ years in AI.">
+<meta property="og:title" content="Dr. Saroj Kumar — AI Architect & Researcher">
+<meta property="og:description" content="AI/ML Researcher · Architect · Innovator · Generative & Agentic AI · FDE">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/60562530?v=4">
+<meta property="og:type" content="profile">
+<link rel="icon" href="https://avatars.githubusercontent.com/u/60562530?v=4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f5f0; --surface:#ffffff; --ink:#15171c; --muted:#5d6370; --line:#e3dfd6;
+    --accent:#0f766e; --accent-soft:#d8efec; --gold:#b7791f;
+    --radius:14px; --maxw:1080px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0e1116; --surface:#161b22; --ink:#e8eaee; --muted:#9aa3b2; --line:#262d38;
+      --accent:#2dd4bf; --accent-soft:#12302d; --gold:#f0b44c;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0e1116; --surface:#161b22; --ink:#e8eaee; --muted:#9aa3b2; --line:#262d38;
+    --accent:#2dd4bf; --accent-soft:#12302d; --gold:#f0b44c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-family:Fraunces,serif;font-weight:700;font-size:1.15rem;color:var(--ink)}
+  .links{display:flex;gap:22px;align-items:center}
+  .links a{color:var(--muted);font-size:.92rem;font-weight:500}
+  .links a:hover{color:var(--ink);text-decoration:none}
+  #themeBtn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;width:34px;height:34px;cursor:pointer;font-size:1rem}
+  @media (max-width:720px){ .links a.hide-sm{display:none} }
+
+  /* Hero */
+  .hero{padding:80px 0 64px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+  h1{font-family:Fraunces,serif;font-weight:700;font-size:clamp(2.3rem,5.5vw,3.8rem);line-height:1.08;letter-spacing:-.02em}
+  .role{font-size:1.15rem;color:var(--muted);margin:18px 0 26px;max-width:560px}
+  .role strong{color:var(--ink);font-weight:600}
+  .cta{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-weight:600;font-size:.93rem;border:1px solid var(--line);color:var(--ink);background:var(--surface)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  :root[data-theme="dark"] .btn.primary{color:#04201d}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .btn.primary{color:#04201d} }
+  .btn:hover{text-decoration:none;transform:translateY(-1px)}
+  .btn svg{width:17px;height:17px;fill:currentColor}
+  .avatar{width:220px;height:220px;border-radius:50%;object-fit:cover;border:6px solid var(--surface);box-shadow:0 0 0 1px var(--line),0 20px 50px -20px rgba(0,0,0,.35)}
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr;padding:48px 0 40px;gap:28px}
+    .avatar{width:130px;height:130px;order:-1}
+  }
+
+  /* Stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+  .stat{padding:22px 20px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat b{display:block;font-family:Fraunces,serif;font-size:1.6rem;line-height:1.2}
+  .stat span{color:var(--muted);font-size:.86rem}
+  @media (max-width:760px){
+    .stats{grid-template-columns:1fr 1fr}
+    .stat:nth-child(2){border-right:none}
+    .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  }
+
+  /* Sections */
+  section{padding:72px 0 0}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:28px}
+  .sec-num{font-family:"JetBrains Mono",monospace;color:var(--accent);font-size:.85rem}
+  h2{font-family:Fraunces,serif;font-size:clamp(1.6rem,3vw,2.1rem);letter-spacing:-.01em}
+  .about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+  .about p{margin-bottom:14px;color:var(--ink)}
+  .about p.lead{font-size:1.1rem}
+  .facts{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .facts dt{font-family:"JetBrains Mono",monospace;font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .facts dd{margin:2px 0 14px;font-weight:500}
+  .facts dd:last-child{margin-bottom:0}
+  @media (max-width:760px){ .about{grid-template-columns:1fr} }
+
+  /* Cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:border-color .2s,transform .2s}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card .ico{width:40px;height:40px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:1.2rem;margin-bottom:14px}
+  .card h3{font-size:1.05rem;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:.93rem}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .tag{font-family:"JetBrains Mono",monospace;font-size:.72rem;padding:3px 9px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+
+  /* Timeline */
+  .timeline{border-left:2px solid var(--line);margin-left:6px}
+  .t-item{position:relative;padding:0 0 30px 28px}
+  .t-item::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+  .t-item .when{font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--muted)}
+  .t-item h3{font-size:1.08rem;margin:2px 0}
+  .t-item .org{color:var(--accent);font-weight:500}
+  .t-item p{color:var(--muted);font-size:.94rem;margin-top:6px;max-width:680px}
+
+  /* Highlights */
+  .highlight{display:flex;gap:18px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--radius);padding:20px 22px;margin-bottom:14px}
+  .highlight .emoji{font-size:1.6rem;line-height:1}
+  .highlight h3{font-size:1.02rem}
+  .highlight p{color:var(--muted);font-size:.93rem}
+
+  /* Repos */
+  .repo{display:flex;flex-direction:column}
+  .repo h3{font-family:"JetBrains Mono",monospace;font-size:.98rem;word-break:break-word}
+  .repo p{flex:1}
+  .repo .meta{display:flex;gap:14px;margin-top:14px;font-size:.82rem;color:var(--muted)}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--gold);margin-right:5px;vertical-align:middle}
+
+  /* Contact */
+  .contact{margin:80px 0 0;background:var(--ink);color:var(--bg);border-radius:22px;padding:52px 40px;text-align:center}
+  .contact h2{color:var(--bg)}
+  .contact p{opacity:.8;max-width:540px;margin:12px auto 26px}
+  .contact .cta{justify-content:center}
+  .contact .btn{background:transparent;color:var(--bg);border-color:color-mix(in srgb,var(--bg) 35%,transparent)}
+  .contact .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  @media (max-width:600px){ .contact{padding:40px 20px} }
+
+  footer{padding:40px 0;text-align:center;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="brand">Saroj Kumar</a>
+    <div class="links">
+      <a href="#about" class="hide-sm">About</a>
+      <a href="#expertise" class="hide-sm">Expertise</a>
+      <a href="#experience" class="hide-sm">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="themeBtn" aria-label="Toggle theme">◐</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div>
+      <div class="eyebrow">Kolkata, India · Wipro Limited · GenAI · Agentic AI</div>
+      <h1>Dr. Saroj Kumar</h1>
+      <p class="role"><strong>AI/ML Researcher · Architect · Innovator.</strong>
+        A Generative AI and Agentic AI technology professional working as a forward deployed engineer — with 12+ years turning artificial intelligence into systems that run in the real world.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://www.linkedin.com/in/saroj-kumar-aiml-qc/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn</a>
+        <a class="btn" href="https://github.com/sarojkumar999" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.2.9 2.3v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>
+          GitHub</a>
+        <a class="btn" href="#contact">Get in touch →</a>
+      </div>
+    </div>
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/60562530?v=4" alt="Portrait of Dr. Saroj Kumar">
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b>12+</b><span>Years in AI & Data Science</span></div>
+    <div class="stat"><b>PhD</b><span>MUIT</span></div>
+    <div class="stat"><b>500+</b><span>Professional connections</span></div>
+    <div class="stat"><b>2026</b><span>Global Icon Award</span></div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sec-head"><span class="sec-num">01</span><h2>About</h2></div>
+    <div class="about">
+      <div>
+        <p class="lead">I'm an AI/ML researcher, architect and innovator at Wipro Limited, with more than twelve years of experience designing and delivering artificial-intelligence systems.</p>
+        <p>As a forward deployed engineer, I work directly with clients to take Generative AI and Agentic AI from idea to production. My work sits where research meets the field: building computer-vision and analytics solutions for safety, security and operations in heavy industry; applying AI to precision agriculture and 3D point-cloud volumetric analysis; and exploring what generative, agentic and quantum-inspired methods can do for real organisations.</p>
+        <p>Alongside consulting and architecture work, I speak regularly at faculty development programmes and industry events, and I enjoy mentoring the next generation of AI practitioners.</p>
+      </div>
+      <dl class="facts">
+        <dt>Current</dt><dd>Wipro Limited</dd>
+        <dt>Education</dt><dd>PhD — MUIT<br>AI Certificate — IIT Mandi</dd>
+        <dt>Based in</dt><dd>Kolkata, West Bengal, India</dd>
+        <dt>Focus</dt><dd>Generative AI · Agentic AI · Forward Deployed Engineering · Computer Vision</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Areas of expertise</h2></div>
+    <div class="grid">
+      <div class="card"><div class="ico">◎</div><h3>Generative & Agentic AI</h3>
+        <p>LLM-powered applications and autonomous agent workflows that automate real business processes.</p>
+        <div class="tags"><span class="tag">LLMs</span><span class="tag">RAG</span><span class="tag">Agents</span></div></div>
+      <div class="card"><div class="ico">▣</div><h3>Computer Vision for Industry</h3>
+        <p>Vision systems for worker safety, site security, vehicle tracking and material monitoring — including mining operations.</p>
+        <div class="tags"><span class="tag">Detection</span><span class="tag">Tracking</span><span class="tag">Video Analytics</span></div></div>
+      <div class="card"><div class="ico">△</div><h3>3D Point Cloud & Volumetrics</h3>
+        <p>Volumetric analysis from 3D point-cloud data for stockpile measurement and site intelligence.</p>
+        <div class="tags"><span class="tag">3D</span><span class="tag">LiDAR</span><span class="tag">Photogrammetry</span></div></div>
+      <div class="card"><div class="ico">❋</div><h3>Precision Agriculture</h3>
+        <p>AI and data-driven tools that help agriculture use resources more sustainably.</p>
+        <div class="tags"><span class="tag">AgriTech</span><span class="tag">Sustainability</span></div></div>
+      <div class="card"><div class="ico">ψ</div><h3>Quantum Computing</h3>
+        <p>Research and teaching on quantum computing and quantum-inspired machine learning.</p>
+        <div class="tags"><span class="tag">Qubits</span><span class="tag">QML</span><span class="tag">Research</span></div></div>
+      <div class="card"><div class="ico">⇄</div><h3>Digital Transformation</h3>
+        <p>Architecture and strategy for taking AI from proof-of-concept into production, including MLOps.</p>
+        <div class="tags"><span class="tag">MLOps</span><span class="tag">Cloud</span><span class="tag">Architecture</span></div></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Experience & education</h2></div>
+    <div class="timeline">
+      <!-- EDIT: add dates and further roles from LinkedIn -->
+      <div class="t-item">
+        <div class="when">Present</div>
+        <h3>AI/ML Researcher & Architect — Forward Deployed Engineering</h3>
+        <div class="org">Wipro Limited · Kolkata</div>
+        <p>Architecting and deploying Generative AI and Agentic AI solutions alongside client teams, from research prototype to production.</p>
+      </div>
+      <div class="t-item">
+        <div class="when">Previously</div>
+        <h3>Senior Data Scientist / System Architect</h3>
+        <div class="org">DCG Data-Core Systems India Pvt Ltd · Kolkata</div>
+        <p>Led AI solution architecture across computer vision, GenAI and analytics for enterprise and industrial clients, including AI for safety and monitoring in mining.</p>
+      </div>
+      <div class="t-item">
+        <div class="when">—</div>
+        <h3>Doctor of Philosophy (PhD)</h3>
+        <div class="org">MUIT</div>
+        <p>Doctoral research in artificial intelligence and data science.</p>
+      </div>
+      <div class="t-item">
+        <div class="when">—</div>
+        <h3>Certificate in Artificial Intelligence</h3>
+        <div class="org">Indian Institute of Technology, Mandi</div>
+      </div>
+      <div class="t-item" style="padding-bottom:0">
+        <div class="when">Ongoing</div>
+        <h3>Speaker & Trainer</h3>
+        <div class="org">Faculty Development Programmes · Industry events</div>
+        <p>Sessions on AI, machine learning, generative AI and quantum computing for faculty, students and professionals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section id="highlights">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Recent highlights</h2></div>
+    <div class="highlight"><div class="emoji">🏆</div><div>
+      <h3>Global Icon Award 2026 — Season 3 (Indian Chapter)</h3>
+      <p>Recognised for contributions to artificial intelligence and technology.</p></div></div>
+    <div class="highlight"><div class="emoji">⛏️</div><div>
+      <h3>AI for the mining sector</h3>
+      <p>On-site study at a coal mine to identify AI-driven solutions for safety, security, vehicle tracking and coal monitoring.</p></div></div>
+  </section>
+
+  <!-- PROJECTS (live from GitHub) -->
+  <section id="projects">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Open-source work</h2></div>
+    <div class="grid" id="repos">
+      <!-- Fallback content; replaced automatically with live data from GitHub when available -->
+      <a class="card repo" href="https://github.com/sarojkumar999/Sentiment-Analysis" target="_blank" rel="noopener">
+        <h3>Sentiment-Analysis</h3><p>Sentiment analysis model deployed on a local server and on AWS cloud.</p>
+        <div class="meta"><span><i class="dot"></i>Jupyter Notebook</span></div></a>
+      <a class="card repo" href="https://github.com/sarojkumar999/datasciencecoursera" target="_blank" rel="noopener">
+        <h3>datasciencecoursera</h3><p>Data science problem sets from the Coursera specialisation.</p>
+        <div class="meta"><span><i class="dot"></i>Data Science</span></div></a>
+      <a class="card repo" href="https://github.com/sarojkumar999/TNUFDP" target="_blank" rel="noopener">
+        <h3>TNUFDP</h3><p>Material from a faculty development programme session.</p>
+        <div class="meta"><span><i class="dot"></i>Training</span></div></a>
+      <a class="card repo" href="https://github.com/sarojkumar999/botbuilder-python" target="_blank" rel="noopener">
+        <h3>botbuilder-python</h3><p>Fork of Microsoft Bot Framework for building conversational bots in Python.</p>
+        <div class="meta"><span><i class="dot"></i>Python</span></div></a>
+    </div>
+    <p style="margin-top:18px"><a href="https://github.com/sarojkumar999?tab=repositories" target="_blank" rel="noopener">See all repositories on GitHub →</a></p>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="contact" id="contact">
+    <h2>Let's build something intelligent</h2>
+    <p>Open to consulting, AI architecture engagements, research collaborations and speaking invitations.</p>
+    <div class="cta">
+      <!-- EDIT: replace with your real email address -->
+      <a class="btn primary" href="mailto:your.email@example.com">✉ Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/saroj-kumar-aiml-qc/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn" href="https://github.com/sarojkumar999" target="_blank" rel="noopener">Follow on GitHub</a>
+    </div>
+  </div>
+</main>
+
+<footer class="wrap">© <span id="yr"></span> Dr. Saroj Kumar · Kolkata, India</footer>
+
+<script>
+  // Theme toggle
+  const root = document.documentElement;
+  let saved = null;
+  try { saved = localStorage.getItem('theme'); } catch(e){}
+  if (saved) root.setAttribute('data-theme', saved);
+  document.getElementById('themeBtn').onclick = () => {
+    const dark = root.getAttribute('data-theme') === 'dark' ||
+      (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+    const next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch(e){}
+  };
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Live repositories from GitHub (skips forks and the profile/site repos)
+  const USER = 'sarojkumar999';
+  const SKIP = [USER.toLowerCase(), (USER + '.github.io').toLowerCase(), 'testinggit'];
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  fetch(`https://api.github.com/users/${USER}/repos?per_page=100&sort=updated`)
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(repos => {
+      const list = repos
+        .filter(r => !r.fork && !SKIP.includes(r.name.toLowerCase()))
+        .sort((a,b) => b.stargazers_count - a.stargazers_count || new Date(b.pushed_at) - new Date(a.pushed_at))
+        .slice(0, 6);
+      if (!list.length) return;
+      document.getElementById('repos').innerHTML = list.map(r => `
+        <a class="card repo" href="${esc(r.html_url)}" target="_blank" rel="noopener">
+          <h3>${esc(r.name)}</h3>
+          <p>${esc(r.description || 'No description yet.')}</p>
+          <div class="meta">
+            ${r.language ? `<span><i class="dot"></i>${esc(r.language)}</span>` : ''}
+            <span>★ ${r.stargazers_count}</span>
+            <span>Updated ${new Date(r.pushed_at).toLocaleDateString('en-IN',{month:'short',year:'numeric'})}</span>
+          </div>
+        </a>`).join('');
+    })
+    .catch(() => {/* keep fallback cards */});
+</script>
+</body>
+</html>
